@@ -1,0 +1,4 @@
+micronaut:
+  application:
+    name: sub-pub
+kafka.bootstrap.servers: localhost:9092
