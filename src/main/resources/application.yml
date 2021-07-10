@@ -1,4 +1,16 @@
 micronaut:
   application:
     name: sub-pub
-kafka.bootstrap.servers: localhost:9092
+kafka:
+  topics:
+    requestTopic: request
+    responseTopic: response
+  bootstrap:
+    servers: localhost:9092
+
+commands:
+  type:
+    CREATE: CreateStrategy
+    UPDATE: UpdateStrategy
+    DELETE: DeleteStrategy
+    READ: ReadStrategy

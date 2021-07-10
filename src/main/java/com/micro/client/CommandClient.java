@@ -8,6 +8,6 @@ import io.micronaut.http.annotation.Body;
 @KafkaClient
 public interface CommandClient {
 
-    @Topic("commands")
+    @Topic(value = "${kafka.topics.requestTopic}")
     void send(@Body Command command);
 }
